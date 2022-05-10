@@ -1,3 +1,3 @@
 # Stacy Fernandez´s SQL Portfolio
 
-##"Welcome to my SQL portfolio, this code repository contains examples of SQL I've written. Feel free to take a look and reach out if you have any questions at fernandez.stacym@gmail.com." 
+##Welcome to my SQL portfolio, this code repository contains examples of SQL I've written. Feel free to take a look and reach out if you have any questions or comments at fernandez.stacym@gmail.com.
