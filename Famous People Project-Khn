@@ -1,0 +1,114 @@
+## For this project, I downloaded book data from Barnes and Noble.
+## Then I created several tables to insert differnent information in each table about, author, title, genre, and pricing into the different table for data.
+## Finally, I performed queries on the data using SQL.
+
+/* Create table about the people and what they do here */
+
+##In the first table I created information only on the author such as genre and how many books published
+
+CREATE TABLE authors (authorid INTEGER, author_name TEXT, genre TEXT, books_published INTEGER);
+
+INSERT INTO authors VALUES (1, "J. R. R. Tolkien", "Fantasy", 36);
+INSERT INTO authors VALUES (2, "Stephen King", "Horror", 64);
+INSERT INTO authors VALUES (3, "James Patterson", "Suspense", 150);
+INSERT INTO authors VALUES (4, "John Grisham", "Suspense", 40);
+INSERT INTO authors VALUES (5, "J. K. Rowling", "Fantasy", 19);
+INSERT INTO authors VALUES (6, "Nora Roberts", "Romance", 225);
+INSERT INTO authors VALUES (7, "Isaac Asimov", "Sci Fi", 500);
+INSERT INTO authors VALUES (8, "Nicholas Sparks", "Romance", 20);
+
+## In the next table I created information about different titles and pricing for paperback books
+
+CREATE TABLE paperback_books (bookid INTEGER, author_name TEXT, title TEXT, price INTEGER);
+
+INSERT INTO paperback_books VALUES (1, "J. R. R. Tolkien", "The Hobbit", 11);
+INSERT INTO paperback_books VALUES (2, "J. R. R. Tolkien", "The Lord of the Rings The Fellowship of the Rings", 12);
+INSERT INTO paperback_books VALUES (3, "J. R. R. Tolkien", "The Lord of the Rings: The Two Towers", 9);
+INSERT INTO paperback_books VALUES (4, "J. R. R. Tolkien", "The Lord of the Rings: The Return of the King", 12);
+INSERT INTO paperback_books VALUES (5, "Stephen King", "The Shining", 15);
+INSERT INTO paperback_books VALUES (6, "Stephen King", "IT", 18);
+INSERT INTO paperback_books VALUES (7, "Stephen King", "The Outsider", 16);
+INSERT INTO paperback_books VALUES (8, "James Patterson", "Along Came a Spider Alex Cross", 18);
+INSERT INTO paperback_books VALUES (9, "James Patterson", "Kiss the Girls Alex Cross", 16);
+INSERT INTO paperback_books VALUES (10, "James Patterson", "Jack and Jill Alex Cross", 17);
+INSERT INTO paperback_books VALUES (11, "John Grisham", "A Time for Mercy", 15);
+INSERT INTO paperback_books VALUES (12, "John Grisham", "The Whistler", 16);
+INSERT INTO paperback_books VALUES (13, "John Grisham", "A Time to Kill", 10);
+INSERT INTO paperback_books VALUES (14, "J. K. Rowling", "Harry Potter and the Sorcerers Stone", 9);
+INSERT INTO paperback_books VALUES (15, "J. K. Rowling", "Harry Potter and the Chamber of Secrets", 10);
+INSERT INTO paperback_books VALUES (16, "J. K. Rowling", "Harry Potter and the Prisoner of Azkaban", 10);
+INSERT INTO paperback_books VALUES (17, "J. K. Rowling", "Harry Potter and the Goblet of Fire", 12);
+INSERT INTO paperback_books VALUES (18, "J. K. Rowling", "Harry Potter and the Order of the Phoenix", 11);
+INSERT INTO paperback_books VALUES (19, "J. K. Rowling", "Harry Potter and the Half-Blood Prince", 13);
+INSERT INTO paperback_books VALUES (20, "J. K. Rowling", "Harry Potter and the Deathly Hallows", 14);
+INSERT INTO paperback_books VALUES (21, "J. K. Rowling", "Harry Potter Series 1-7", 78);
+INSERT INTO paperback_books VALUES (22, "Nora Roberts", "Legacy", 18);
+INSERT INTO paperback_books VALUES (23, "Nora Roberts", "Hideaway", 16);
+INSERT INTO paperback_books VALUES (24, "Nora Roberts", "Angels Fall", 9);
+INSERT INTO paperback_books VALUES (25, "Isaac Asimov", "Foundation", 15);
+INSERT INTO paperback_books VALUES (26, "Isaac Asimov", "Foundation and Empire", 17);
+INSERT INTO paperback_books VALUES (27, "Isaac Asimov", "Second Foundation", 17);
+INSERT INTO paperback_books VALUES (28, "Nicholas Sparks", "Every Breath", 15);
+INSERT INTO paperback_books VALUES (29, "Nicholas Sparks", "The Notebook", 15);
+
+
+
+## In the last table I created information about different titles and pricing for hardcover books
+
+CREATE TABLE hardcover_books (bookid INTEGER, author_name TEXT, title TEXT, price INTEGER);
+
+INSERT INTO hardcover_books VALUES (1, "J. R. R. Tolkien", "The Hobbit", 32);
+INSERT INTO hardcover_books VALUES (2, "J. R. R. Tolkien", "The Lord of the Rings The Fellowship of the Rings", 22);
+INSERT INTO hardcover_books VALUES (3, "J. R. R. Tolkien", "The Lord of the Rings: The Two Towers", 40);
+INSERT INTO hardcover_books VALUES (4, "J. R. R. Tolkien", "The Lord of the Rings: The Return of the King", 40);
+INSERT INTO hardcover_books VALUES (5, "Stephen King", "The Shining", 25);
+INSERT INTO hardcover_books VALUES (6, "Stephen King", "IT", 32);
+INSERT INTO hardcover_books VALUES (7, "Stephen King", "The Outsider", 27);
+INSERT INTO hardcover_books VALUES (8, "James Patterson", "Along Came a Spider Alex Cross", 30);
+INSERT INTO hardcover_books VALUES (9, "James Patterson", "Kiss the Girls Alex Cross", 30);
+INSERT INTO hardcover_books VALUES (10, "James Patterson", "Jack and Jill Alex Cross", null);
+INSERT INTO hardcover_books VALUES  (11, "John Grisham", "A Time for Mercy", 28);
+INSERT INTO hardcover_books VALUES (12, "John Grisham", "The Whistler", 30);
+INSERT INTO hardcover_books VALUES (13, "John Grisham", "A Time to Kill", 35);
+INSERT INTO hardcover_books VALUES (14, "J. K. Rowling", "Harry Potter and the Sorcerers Stone", 24);
+INSERT INTO hardcover_books VALUES (15, "J. K. Rowling", "Harry Potter and the Chamber of Secrets", 30);
+INSERT INTO hardcover_books VALUES (16, "J. K. Rowling", "Harry Potter and the Prisoner of Azkaban", 27);
+INSERT INTO hardcover_books VALUES (17, "J. K. Rowling", "Harry Potter and the Goblet of Fire", 30);
+INSERT INTO hardcover_books VALUES (18, "J. K. Rowling", "Harry Potter and the Order of the Phoenix", 27);
+INSERT INTO hardcover_books VALUES (19, "J. K. Rowling", "Harry Potter and the Half-Blood Prince", 27);
+INSERT INTO hardcover_books VALUES (20, "J. K. Rowling", "Harry Potter and the Deathly Hallows", 32);
+INSERT INTO hardcover_books VALUES (21, "J. K. Rowling", "Harry Potter Series 1-7", 180);
+INSERT INTO hardcover_books VALUES (22, "Nora Roberts", "Legacy", 22);
+INSERT INTO hardcover_books VALUES (23, "Nora Roberts", "Hideaway", 23);
+INSERT INTO hardcover_books VALUES (24, "Nora Roberts", "Angels Fall", null);
+INSERT INTO hardcover_books VALUES (25, "Isaac Asimov", "Foundation", null);
+INSERT INTO hardcover_books VALUES (26, "Isaac Asimov", "Foundation and Empire", null);
+INSERT INTO hardcover_books VALUES (27, "Isaac Asimov", "Second Foundation", null);
+INSERT INTO hardcover_books VALUES (28, "Nicholas Sparks", "Every Breath", 28);
+INSERT INTO hardcover_books VALUES (29, "Nicholas Sparks", "The Notebook", 18);
+
+
+##Next, I explored the data using and querying the following SQL.
+
+##First I  wanted to practice querying data from two tables to join information from both tables
+SELECT authors.author_name, paperback_books.title, paperback_books.price 
+FROM authors
+JOIN paperback_books
+ON authors.author_name = paperback_books.author_name;
+
+##Then I  wanted to query data from two tables to join additional information from both tables
+
+SELECT paperback_books.title, authors.genre
+FROM paperback_books
+JOIN authors
+ON paperback_books.author_name = authors.author_name;
+
+
+##Lastly I  wanted to query data from all three tables to join information from both tables such as author, title, genre, and compare pricing from paperback and hardcover
+
+SELECT authors.author_name, paperback_books.title, authors.genre, paperback_books.price AS paperback_price, hardcover_books.price AS harcover_price
+FROM authors
+JOIN paperback_books
+ON authors.author_name = paperback_books.author_name
+JOIN hardcover_books
+ON paperback_books.title = hardcover_books.title;
